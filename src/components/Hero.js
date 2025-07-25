@@ -22,7 +22,6 @@ import webIcon from '../images/webImage.svg';
 import designIcon from '../images/penImage.svg';
 import marketingIcon from '../images/marketingImage.svg';
 import FaqContactSection from './Faqsection';
-import ContactSection from './ContactSection';
 import rectangleImage from '../images/rectangleImage.svg'
 import diamondImage from '../images/diamondImage.svg'
 
@@ -182,7 +181,7 @@ const backendStack = [
           We will share our best ideas for the amazing project delivery.
         </p>
 
-        <div className="flex gap-12 text-left flex-wrap">
+        <div className="flex flex-wrap flex-col items-center text-center gap-12 md:flex-row md:items-start md:text-left">
           {/* Stack Descriptions */}
           <div className='w-[56%]'>
             <h3 className="text-lg font-semibold mb-2">Mobile Development Stack</h3>
@@ -428,7 +427,6 @@ const services = [
       <IndustriesWeServe />
       <OurServices />
       <FaqContactSection />
-      <ContactSection />
     </div>
   );
 };

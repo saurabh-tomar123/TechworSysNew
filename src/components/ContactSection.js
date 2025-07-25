@@ -1,79 +1,121 @@
 import React from 'react';
+import contactGradient from '../images/contactGradient.png'
+import phoneLogo  from '../images/phoneLogo.png'
+import locationLogo  from '../images/locationLogo.svg'
+import emailLogo  from '../images/emailLogo.svg'
 
 const ContactSection = () => {
-  return (
-    <section
-      className="py-16 px-6 md:px-16 lg:px-24 flex gap-1"
-      style={{
-        backgroundImage: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/your-image.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="max-w-7xl mx-auto text-white w-[40%]">
-        {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Get in Touch to Discuss <br /> Your Idea
-        </h2>
+ 
+ function ContactUs(){
+  return(
+    <div className="w-full py-12 px-4 md:px-10 bg-gray-50 flex flex-col items-center" >
+      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-6">
+        {/* Left Box - Contact Info */}
+        <div className="bg-white p-6 rounded-md border">
+          <h2 className="text-xl font-semibold mb-2">Contact Us</h2>
+          <p className="text-gray-500 text-[44px] mb-6">
+            We are always ready to help you and answer your questions
+          </p>
 
-        <p className="text-sm md:text-base mb-8 max-w-2xl text-gray-300">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries.
-        </p>
+          <div className=" flex items-center">
+            <div className='flex items-baseline flex-wrap gap-3 space-y-6"'>
+
+    
+            {/* Phone */}
+            <div className="flex items-start gap-3">
+              <div className="text-white bg-blue-100 text-blue-600 p-2 rounded-full">
+                {/* <FaPhoneAlt /> */}
+                <img src={phoneLogo} />
+              </div>
+              <div>
+                <p className="font-medium">Call Us</p>
+                <p className="text-gray-600 text-sm">+91 1234567891</p>
+              </div>
+            </div>
+
+            {/* Address */}
+            <div className="flex items-start gap-3">
+              <div className="text-white bg-blue-100 text-blue-600 p-2 rounded-full">
+                <img src={locationLogo} />
+              </div>
+              <div>
+                <p className="font-medium">Address</p>
+                <p className="text-gray-600 text-sm">
+                  Noida One sec62 Noida 201301
+                </p>
+              </div>
+            </div>
+
+            {/* Email 1 */}
+            <div className="flex items-start gap-3">
+              <div className="text-white bg-blue-100 text-blue-600 p-2 rounded-full">
+                <img src={emailLogo} />
+              </div>
+              <div>
+                <p className="font-medium">Email Us</p>
+                <p className="text-gray-600 text-sm">Support@networsys.com</p>
+              </div>
+            </div>
+            </div>
+
+          </div>
         </div>
-        {/* Form */}
-        <div className="max-w-7xl ml-auto text-white w-[50%]">
-        <form className="grid md:grid-cols-2 gap-4 text-black">
-          <input
-            type="text"
-            placeholder="Name"
-            className="p-3 rounded-md w-full"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="p-3 rounded-md w-full"
-          />
 
-          {/* Phone Input with Country Code */}
-          <div className="flex items-center bg-white rounded-md p-2">
-            <span className="mr-2 text-sm text-gray-600">🇮🇳 +91</span>
+        {/* Right Box - Form */}
+        <div className="bg-white p-6 rounded-md border">
+          <h2 className="text-xl font-semibold text-blue-900 mb-1">Get In Touch</h2>
+          <p className="text-sm text-gray-500 mb-6">
+            Fill out the form, and we’ll contact you
+          </p>
+
+          <form className="space-y-4">
             <input
               type="text"
-              placeholder="Enter Contact Number"
-              className="outline-none flex-1 text-sm"
+              placeholder="Full Name*"
+              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
             />
-          </div>
+            <input
+              type="text"
+              placeholder="Phone Number*"
+              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
+            />
+            <input
+              type="email"
+              placeholder="Email*"
+              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
+            />
+            <textarea
+              rows="4"
+              placeholder="Message*"
+              className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200"
+            ></textarea>
 
-          <input
-            type="text"
-            placeholder="Interested Services"
-            className="p-3 rounded-md w-full"
-          />
-
-          {/* Full width textarea */}
-          <textarea
-            placeholder="Write Query"
-            rows="4"
-            className="p-3 rounded-md md:col-span-2 w-full"
-          ></textarea>
-
-          {/* Submit button */}
-          <div className="md:col-span-2">
             <button
               type="submit"
-              className="bg-white text-black px-8 py-2 rounded-full font-medium hover:bg-gray-200 transition"
+              className="bg-yellow-400 text-black font-medium px-6 py-2 rounded-full hover:bg-yellow-500 transition"
             >
               Submit
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </section>
+    </div>
   );
+ }
+  return (
+    <div>
+      {/* <Header /> */}
+    <div className="w-full py-16 px-6  rounded-md" style={{ backgroundImage: `url(${contactGradient})`  }}>
+      <p className="text-[50px] text-black mb-2">Contact Us</p>
+      <h1 className="text-3xl  md:text-[80px] font-bold text-black ">
+        We are here To{" "}
+        <span className="text-yellow-400 text-[80px]">help you</span>
+      </h1>
+    </div>
+    <ContactUs />
+    </div>
+  );
+
 };
 
 export default ContactSection;
