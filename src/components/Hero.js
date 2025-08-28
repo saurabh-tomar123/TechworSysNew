@@ -404,22 +404,26 @@ const services = [
 };
 
   return (
-    <div className='bg-black' style={{ backgroundImage: `url(${heroImage})`  }}>
-    <section className="relative text-white py-20 px-6 md:px-16 lg:px-24 h-[703px]"  style={{ backgroundImage: `url(${gradient})`,  }}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 max-w-7xl mx-auto" >
-        {/* Left: Text content */}
-        <div className="z-10 relative">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-            We Build Mobile <br /> and Web Apps
-          </h1>
-          <p className="text-lg mt-6 text-gray-300 max-w-lg">
-            For Startups & SMEs. Business-results oriented and AI-powered 🚀
-          </p>
-          
+    <div className="bg-black">
+      <section
+        className="relative text-white py-20 px-6 md:px-16 lg:px-24 h-[703px] bg-no-repeat bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${gradient}), url(${heroImage})`,
+        }}
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 max-w-7xl mx-auto">
+          {/* Left: Text content */}
+          <div className="z-10 relative">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+              We Build Mobile <br /> and Web Apps
+            </h1>
+            <p className="text-lg mt-6 text-gray-300 max-w-lg">
+              For Startups & SMEs. Business-results oriented and AI-powered 🚀
+            </p>
+          </div>
         </div>
+      </section>
 
-      </div>
-    </section>
       <AboutUs />
       <FeatureGrid />
       <IdeaCTA />
