@@ -341,7 +341,7 @@ const services = [
         </p>
 
         {/* Service Cards  grid md:grid-cols-2 grid-cols-1 gap-6*/}
-        <div className="flex gap-[10px] flex-wrap">
+        <div className="flex flex-wrap gap-[10px] sm:flex-nowrap">
           {/* Large Card */}
           <div className="bg-black text-white rounded-xl p-6 flex flex-col justify-between min-h-[320px]">
                 <div className='flex justify-between flex-wrap'>
