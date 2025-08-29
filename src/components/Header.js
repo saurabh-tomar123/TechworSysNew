@@ -14,13 +14,13 @@ const Header = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="flex mt-10 md:flex flex-wrap gap-8 items-center font-medium text-black">
+      <nav className="flex md:flex flex-wrap gap-8 items-center font-medium text-black">
         <a href="#" className="hover:text-blue-600 transition">Service</a>
         <a href="#" className="hover:text-blue-600 transition">Industries</a>
         <Link to='/blog'  className="hover:text-blue-600 transition">Blog</Link>
         <Link to='/aboutus'  className="hover:text-blue-600 transition">About Us</Link>
-       <button className="bg-yellow-300 hover:bg-yellow-400 transition text-black font-medium py-2 px-6 rounded-full">
-          <Link to='/contactus'> Contact us</Link>
+        <button className="relative bg-yellow-300 hover:bg-yellow-400 text-black font-medium py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_rgba(250,204,21,0.7)]">
+          <Link to="/contactus">Contact us</Link>
         </button>
         
       </nav>

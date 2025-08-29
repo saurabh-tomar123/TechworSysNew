@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 import heroImage from '../images/heroImage.svg'; // Replace with your image path
 import gradient from '../images/gradient.png'
 import aboutImg  from '../images/contentImage.svg'
@@ -21,11 +22,12 @@ import mobileIcon from '../images/mobileImage.svg';
 import webIcon from '../images/webImage.svg';
 import designIcon from '../images/penImage.svg';
 import marketingIcon from '../images/marketingImage.svg';
-import FaqContactSection from './Faqsection';
 import rectangleImage from '../images/rectangleImage.svg'
+import FaqContactSection from './Faqsection';
 import diamondImage from '../images/diamondImage.svg'
 
 const Hero = () => {
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('Education');
 
 const features = [
@@ -148,7 +150,7 @@ const IdeaCTA = () => {
           {/* Right Arrow + Button */}
           <div className="flex items-center md:items-end gap-3">
             <img src={curvedArrow} alt="curve arrow" className="w-32 md:w-48 -mt-4" />
-            <button className="bg-yellow-300 hover:bg-yellow-400 text-black font-medium px-6 py-2 rounded-full">
+            <button className="bg-yellow-300 hover:bg-yellow-400 text-black font-medium px-6 py-2 rounded-full" onClick={() => navigate('contactus')}>
               Contact us
             </button>
           </div>
@@ -181,7 +183,7 @@ const backendStack = [
           We will share our best ideas for the amazing project delivery.
         </p>
 
-        <div className="flex flex-wrap flex-col items-center text-center gap-12 md:flex-row md:items-start md:text-left">
+        <div className="flex flex-wrap flex-col items-center text-center gap-12 md:flex-row md:justify-center md:items-start md:text-left">
           {/* Stack Descriptions */}
           <div className='w-[56%]'>
             <h3 className="text-lg font-semibold mb-2">Mobile Development Stack</h3>
@@ -251,7 +253,7 @@ const IndustriesWeServe = () => {
     <section className="bg-black text-white py-20 px-6 md:px-16">
       <div className="max-w-7xl mx-auto flex flex-col items-center relative">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 w-[926px]">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 w-[926px] z-50">
           Industries We Serve as a Custom <span className="text-yellow-400">Mobile Application Development</span> Company
         </h2>
         <img src={rectangleImage} className='absolute -right-[72px] -top-[10px]'/>
@@ -341,7 +343,7 @@ const services = [
         </p>
 
         {/* Service Cards  grid md:grid-cols-2 grid-cols-1 gap-6*/}
-        <div className="flex flex-wrap gap-[10px] sm:flex-nowrap">
+        <div className="flex gap-[10px] flex-wrap sm:flex-nowrap ">
           {/* Large Card */}
           <div className="bg-black text-white rounded-xl p-6 flex flex-col justify-between min-h-[320px]">
                 <div className='flex justify-between flex-wrap'>
@@ -404,21 +406,28 @@ const services = [
 };
 
   return (
-    <div className='bg-black' style={{ backgroundImage: `url(${heroImage})`  }}>
-    <section className="relative text-white py-20 px-6 md:px-16 lg:px-24 h-[703px]"  style={{ backgroundImage: `url(${gradient})`,  }}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 max-w-7xl mx-auto" >
-        {/* Left: Text content */}
-        <div className="z-10 relative">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-            We Build Mobile <br /> and Web Apps
-          </h1>
-          <p className="text-lg mt-6 text-gray-300 max-w-lg">
-            For Startups & SMEs. Business-results oriented and AI-powered 🚀
-          </p>
-          
+    <div className="bg-black">
+      <section
+        className="relative text-white py-20 px-6 md:px-16 lg:px-24 h-[703px] bg-no-repeat bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${gradient}), url(${heroImage})`,
+        }}
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 max-w-7xl mx-auto">
+          {/* Left: Text content */}
+          <div className="z-10 relative">
+            <h1 className=" w-[800px] text-4xl md:text-5xl lg:text-8xl font-extrabold">
+              We Build Mobile <br /> and Web Apps
+            </h1>
+            <p className=" text-[30px] leading-[50px] max-w-[700px] w-full text-lg mt-6 text-gray-300">
+              For Startups & SMEs. Business-results oriented and AI-powered 🚀
+            </p>
+            <button className="bg-white text-black mt-4 px-4 py-1.5 rounded-full text-sm font-medium inline-flex items-center gap-1 hover:bg-gray-100 transition">
+                      Get a Quote <img src={btnArrow} className='h-[17px] w-[18px]' />
+                    </button>
+          </div>
         </div>
 
-      </div>
     </section>
       <AboutUs />
       <FeatureGrid />

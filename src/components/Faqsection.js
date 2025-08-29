@@ -80,9 +80,14 @@ const FaqSection = () => {
                   {activeIndex === idx ? <img src={minusImage} /> : <img src={plusImage} />}
                 </span>
               </div>
-              {activeIndex === idx && (
-                <p className=" bg-white mt-2 text-sm text-gray-600 p-5 rounded-[20px]">{faq.answer}</p>
-              )}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${activeIndex === idx ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
+                  }`}
+              >
+                <p className="bg-white text-sm text-gray-600 p-5 rounded-[20px]">
+                  {faq.answer}
+                </p>
+              </div>
             </div>
           ))}
         </div>
