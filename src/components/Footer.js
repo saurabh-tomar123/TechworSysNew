@@ -11,13 +11,13 @@ const Footer = () => {
     <div className="bg-gradient-to-r from-purple-50 to-blue-50  px-4 text-center">
 
       {/* Contact Items */}
-      <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-10 text-sm text-gray-700">
+      <div className="max-w-6xl mx-auto flex flex-wrap justify-center text-sm text-gray-700">
         {/* Skype */}
         <div className="flex-col items-center">
-          <div className="text-center">
          <h3 className="text-xl font-semibold text-gray-800">Get In Touch</h3>
+          <div className="text-center">
           </div>
-         <div className="flex items-center  h-[50px]">
+         <div className="flex items-center h-[50px] w-[280px]">
             <img src={skypeImage} />
           <div className="text-left">
             <p className="font-semibold">Skype</p>
@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
 
         {/* Email */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 w-[280px]">
             <img src={emailImage} />
           <div className="text-left">
             <p className="font-semibold">Email Us</p>
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
 
         {/* WhatsApp */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 w-[280px]">
              <img src={wtspImage} />
           <div className="text-left">
             <p className="font-semibold">WhatsApp</p>
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
 
         {/* India Number */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 w-[280px]">
              <img src={flagImage} />
           <div className="text-left">
             <p className="font-semibold">INDIA No.</p>
