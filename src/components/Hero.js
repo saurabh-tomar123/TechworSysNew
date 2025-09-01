@@ -185,7 +185,7 @@ const Hero = () => {
 
           <div className="flex flex-wrap flex-col items-center text-center gap-12 md:flex-row md:justify-center md:items-start md:text-left">
             {/* Stack Descriptions */}
-            <div className='w-[56%]'>
+            <div className='w-full md:w-[56%] text-left'>
               <h3 className="text-lg font-semibold mb-2">Mobile Development Stack</h3>
               <p className="text-gray-700 mb-6">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -253,7 +253,7 @@ const Hero = () => {
       <section className="bg-black text-white py-20 px-6 md:px-16">
         <div className="max-w-7xl mx-auto flex flex-col items-center relative">
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 w-[926px] z-50">
+          <h2 className="text-3xl max-w-[926px] w-[100%] md:text-4xl font-bold text-center mb-4 z-50 relative bottom-[40px]">
             Industries We Serve as a Custom <span className="text-yellow-400">Mobile Application Development</span> Company
           </h2>
           <img src={rectangleImage} className='absolute -right-[72px] -top-[10px]' />

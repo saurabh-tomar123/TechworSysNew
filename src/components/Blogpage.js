@@ -26,8 +26,7 @@ function Blogpage(){
             start: "top 80%", // when card enters viewport
             toggleActions: "play none none none",
           },
-          y: 200, // start 100px lower
-          x: 300,
+          y: 50, // start 100px lower
           opacity: 0, // start invisible
           duration: 0.8,
           delay: i * 0.1, // stagger effect
