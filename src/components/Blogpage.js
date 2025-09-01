@@ -126,30 +126,32 @@ const BlogCardList = () => {
 
 
     return(
-        <div>
-            <section className="w-full h-[400px] relative">
-              <img
-                src={blogImage}
-                alt="Team working"
-                className="absolute top-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-70 z-10" style={{ backgroundImage: `url(${gradient})`}} />
-        
-              <div className="absolute inset-0 z-20 flex items-center px-10 lg:px-20">
-                <div className="text-white max-w-xl">
-                  <h2 className="text-4xl font-bold mb-4">Blogs </h2>
-                  <p className="text-gray-300 leading-relaxed">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy text
-                    ever since the 1500s, when an.
-                  </p>
-                </div>
-              </div>
-            </section>
-             
-            <BlogCardList/>
-            <LetsTalk />
+      <div>
+        <section className="w-full h-[400px] relative overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${gradient}), url(${blogImage})`,
+            }}
+          />
+
+          <div className="absolute inset-0 bg-black bg-opacity-70 z-10" />
+
+          <div className="absolute inset-0 z-20 flex items-center px-10 lg:px-20">
+            <div className="text-white max-w-xl">
+              <h2 className="text-4xl font-bold mb-4">Blogs</h2>
+              <p className="text-gray-300 leading-relaxed">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an.
+              </p>
             </div>
+          </div>
+        </section>
+
+        <BlogCardList />
+        <LetsTalk />
+      </div>
     )
 }
 export default Blogpage
