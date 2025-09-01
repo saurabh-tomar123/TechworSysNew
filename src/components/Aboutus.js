@@ -28,7 +28,7 @@ const MissionVisionSection = () => {
           <img
             src={aboutImg} // replace with your image path
             alt="Team"
-            className="rounded-2xl border-8 border-[#ffecec] object-cover w-[622px] h-[439px]"
+            className="rounded-2xl border-8 border-[#ffecec] object-cover w-[622px] h-[439px] transition-all duration-300 transform hover:scale-105"
           />
         </div>
 
@@ -71,7 +71,7 @@ const MissionVisionSection = () => {
           <img
             src={visionImg} // replace with your image path
             alt="Team"
-            className="rounded-2xl object-cover w-[622px] h-[439px]"
+            className="rounded-2xl object-cover w-[622px] h-[439px] transition-all duration-300 transform hover:scale-105"
           />
         </div>
 

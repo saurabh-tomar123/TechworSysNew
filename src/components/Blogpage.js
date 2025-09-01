@@ -1,12 +1,43 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 import blogImage from '../images/blogImage.svg'
 import seoImage from '../images/seoImage.svg'
 import uiImage from '../images/uiImage.svg'
 import appdevImage from '../images/appdevImage.svg'
-import aboutusImage from '../images/aboutusImage.svg'
 import LetsTalk from './LetsTalk'
 import gradient from '../images/gradient.png'
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Blogpage(){
+   const container = useRef();
+
+  useGSAP(
+    () => {
+      const cards = gsap.utils.toArray(".card"); // select all with .card class
+
+      cards.forEach((card, i) => {
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%", // when card enters viewport
+            toggleActions: "play none none none",
+          },
+          y: 200, // start 100px lower
+          x: 300,
+          opacity: 0, // start invisible
+          duration: 0.8,
+          delay: i * 0.1, // stagger effect
+          ease: "power2.out",
+        });
+      });
+    },
+    { scope: container }
+  );
+
 const blogPosts = [
   {
     id: 1,
@@ -92,12 +123,12 @@ const blogPosts = [
 
 const BlogCardList = () => {
   return (
-    <section className="py-16 px-4 bg-[#f9f9f9]">
+    <section className="py-16 px-4 bg-[#f9f9f9]" ref={container} >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post) => (
           <div
             key={post.id}
-            className="bg-white rounded-lg shadow-sm border border-gray-200 p-4"
+            className=" card bg-white rounded-lg shadow-sm border border-gray-200 p-4"
           >
             <div className="relative">
               <img
@@ -127,7 +158,7 @@ const BlogCardList = () => {
 
     return(
       <div>
-        <section className="w-full h-[400px] relative overflow-hidden">
+        <section className="w-full h-[400px] relative overflow-hidden" >
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{

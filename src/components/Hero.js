@@ -66,7 +66,7 @@ const Hero = () => {
             <img
               src={aboutImg}
               alt="Team Working"
-              className="rounded-md shadow-md"
+              className="rounded-md shadow-md transition-all duration-300 transform hover:scale-105"
             />
           </div>
 
