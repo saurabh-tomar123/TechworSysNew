@@ -347,7 +347,7 @@ const Hero = () => {
             <div className="bg-black text-white rounded-xl p-6 flex flex-col justify-between min-h-[320px]">
               <div className='flex justify-between flex-wrap'>
                 <img src={services[0].icon} alt="Mobile" className="w-[175px] h-[175px] mb-6" />
-                <img src={diamondImage} alt="Mobile" className="w-[100%] h-[100%] mb-6" style={{ maxWidth: "233px", maxHeight: "233px" }} />
+                {/* <img src={diamondImage} alt="Mobile" className="w-[100%] h-[100%] mb-6" style={{ maxWidth: "233px", maxHeight: "233px" }} /> */}
 
               </div>
 

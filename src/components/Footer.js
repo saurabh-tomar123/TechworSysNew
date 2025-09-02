@@ -67,7 +67,7 @@ const Footer = () => {
           <h2 className="text-xl font-bold text-gray-900 mb-2">
             <img src={techlogo} />
           </h2>
-          <p className="text-sm leading-relaxed text-gray-600 mt-2">
+          <p className="text-sm leading-relaxed text-gray-600 mt-2 w-[303px]">
             Office No.-302, 3rd Floor, TOWER–C, Noida One,<br />
             Rasoolpur Nawada, Industrial Area, Sector 62,<br />
             Noida, Uttar Pradesh 201309
