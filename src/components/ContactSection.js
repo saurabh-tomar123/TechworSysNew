@@ -68,7 +68,7 @@ const ContactSection = () => {
             Fill out the form, and we’ll contact you
           </p>
 
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={(event)=> event.preventDefault()}>
             <input
               type="text"
               placeholder="Full Name*"
